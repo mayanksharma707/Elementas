@@ -23,20 +23,7 @@ particular), on top of the original grid + 3D atom:
   slider, and a "reset view" button that returns the camera to its default
   framing.
 
-## Running it
-
-
-No install, no build step, no server needed.
-
-1. Unzip the folder.
-2. Double-click `index.html`. It opens in your default browser.
-
-You do need an internet connection the first time each file loads, because
-`index.html` pulls two things from the web: Three.js (for the 3D atom) and
-two Google Fonts (Space Grotesk, IBM Plex Mono). Once your browser has
-cached them, it'll work offline too.
-
-## How it's built (and why, for a beginner)
+## How it's built
 
 - **`data.js`** — all 118 elements as one JS array (`const ELEMENTS = [...]`).
   Generated from the open-source `mendeleev` Python package: atomic number,
@@ -67,17 +54,3 @@ cached them, it'll work offline too.
   system — each tile's color, border, and the legend chips all come from
   the same set of CSS variables, so the color-coding *is* the theme rather
   than a decoration on top of one.
-
-## Where to take it next
-
-- **Isotopes**: `mendeleev` also has isotope data — add a toggle to show
-  neutron count changing the nucleus.
-- **Compare mode**: pick two elements, show both atom models side by side.
-- **Trends**: a line chart of electronegativity or atomic radius across a
-  period (Chart.js or a hand-rolled SVG would both work).
-- **Quiz mode**: hide the symbol, show the atom model, ask the user to
-  guess the element.
-- **PWA**: add a manifest + service worker so it installs and works fully
-  offline.
-- **Deploy**: push this folder to a GitHub repo and turn on GitHub Pages —
-  free hosting, and you get a real link for your resume/portfolio.
